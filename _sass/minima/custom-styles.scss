@@ -23,6 +23,14 @@ body {
     color: #DE4842;
 }
 
-a:visited {
+a:visited, a:hover, strong {
     color: #DE4842;
+}
+
+.highlighter-rouge .highlight, code {
+  background-color: #EDEBED;
+}
+
+.highlighter-rouge div {
+  border: 1px solid #C2C1C2;
 }
