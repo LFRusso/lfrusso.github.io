@@ -1,0 +1,28 @@
+// Placeholder to allow defining custom styles that override everything else.
+// (Use `_sass/minima/custom-variables.scss` to override variable defaults)
+
+.home, .post {
+    background-color: #EFEFEF;
+    padding: 20px;
+
+    hr {
+        color: #EFEFEF;
+    }
+}
+
+.site-header {
+    background-color: #022B3A;
+    color: #EFEFEF;
+}
+
+body {
+    background-color: #C2C1C2;
+}
+
+.post-header, h1, h2, h3, h4, a{
+    color: #DE4842;
+}
+
+a:visited {
+    color: #DE4842;
+}
