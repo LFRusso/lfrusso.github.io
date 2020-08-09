@@ -1,12 +1,8 @@
 ---
 layout: post
-title:  "Testing Images"
+title:  "Cassinos, gamble and Markov chains: Parrondo's Paradox!"
 date:   2020-08-08 14:05:26 -0300
-categories: images
+categories: statistics linalg
 ---
 
-Testing some images to see if it works
-
-![](/assets/img/desktop.png)    
-
-Nice.
+[Notebook](/assets/posts/2020/08/parrondo/code/parrondo.ipynb)
