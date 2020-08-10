@@ -260,7 +260,7 @@ $$
 \rho = 0.745 \pi_1 + 0.745 \pi_2 + 0.095 \pi_3 = 0.4956
 $$
 
-therefore leaving us with a $$49.56\%$$ chance of success, which is still a disadvantage. We can also see that running this playing this games multiple times and ploting the final number of tickets as a histogram:
+therefore leaving us with a $$49.56\%$$ chance of success, which is still a disadvantage. We can also visualize this by playing this game multiple times and ploting the final number of tickets as a histogram:
 
 ![fig](/assets/posts/2020/08/parrondo/img/fig7.png)
 
