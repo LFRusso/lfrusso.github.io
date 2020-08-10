@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Casinos, gamble and Markov chains: Parrondo's Paradox!"
-date:   2020-08-09 14:05:26 -0300
+date:   2020-08-10 14:05:26 -0300
 categories: statistics linalg computing
 ---
 
@@ -9,7 +9,7 @@ So it's not really any secret that casinos always have an edge over its customer
 
 The thing is, while this is relatively easy to achieve if you are careful enough to "isolate" your games in a way that they are unaffected by *external variables*, this is absolutely not the case otherwise!
 
-A relatively popular example os this is *Parrondo's paradox*. To start off, let's toss some fair coins: if we get tails, we win one ticket. Otherwise we lose the same amount.
+A relatively popular example of this is *Parrondo's paradox*. To start off, let's toss some fair coins: if we get tails, we win one ticket. Otherwise we lose the same amount.
 
 ![fig1](/assets/posts/2020/08/parrondo/img/fig3.png)
 
