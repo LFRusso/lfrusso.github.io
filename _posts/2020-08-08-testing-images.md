@@ -5,7 +5,7 @@ date:   2020-08-09 14:05:26 -0300
 categories: statistics linalg computing
 ---
 
-So it's not really any secret that casinos always have an edge over its customers. That is basically their business model: to always have the upper hand in their games such that, even if they lose sometimes, generally they win even though this advantage doesn't seem so meaninful in a way it would to put away the gamblers (a $$49.5\%$$ chance of winning does not seem so bad, its almost $$50$$).
+So it's not really any secret that casinos always have an edge over its customers. That is basically their business model: to always have the upper hand in their games such that, even if they lose sometimes, generally they win (even though this advantage doesn't seem so meaninful in a way it would put away the gamblers).
 
 The thing is, while this is relatively easy to achieve if you are careful enough to "isolate" your games in a way that they are unaffected by *external variables*, this is absolutely not the case otherwise!
 
@@ -273,3 +273,78 @@ And suddenly we are winning! If we take the average number of tickets for each t
 ![fig](/assets/posts/2020/08/parrondo/img/fig9.png)
 
 This seemingly paradoxical result was discussed on the **Nature magazine's** article [Losing strategies can win by Parrondo's paradox](https://www.nature.com/articles/47220) by Gregory P. Harmer and Derek Abbott after its discovery by Juan Parrondo as published in [Unsolved Problems of Noise and Fluctuations](https://aip.scitation.org/doi/10.1063/1.1398543).
+
+We already discussed all the required tools to describe mathematically what exactly is happening here. Let's use our sets $$P^{(1)}, P^{(2)}$$ and $$P^{(3)}$$ deffined previously. Now, just like we did with game $$B$$, think about game $$A$$ in a similar fashion (even though the probabilities do not depend on the sets in this case). Consider the coin toss deciding which graph we will be working with and *Dojyaaa~n*!
+
+![fig](/assets/posts/2020/08/parrondo/img/fig14.png)
+
+Now we just include this when building our stochastic matrix:
+
+$$
+\begin{cases} 
+S^{(1)}_{i+1} = \frac{1}{2} (0.255 + 0.505) S^{(2)}_{i} + \frac{1}{2} (0.095 + 0.495) S^{(3)}_{i} \\ 
+S^{(2)}_{i+1} = \frac{1}{2} (0.745 + 0.495) S^{(1)}_{i} + \frac{1}{2} (0.905 + 0.505) S^{(3)}_{i}\\
+S^{(3)}_{i+1} = \frac{1}{2} (0.255 + 0.505) S^{(1)}_{i} + \frac{1}{2} (0.745 + 0.495) S^{(2)}_{i}
+\end{cases}
+$$
+
+$$
+\Rightarrow 
+\left(\begin{array}{c} 
+S^{(1)}_{i+1}\\
+S^{(2)}_{i+1}\\
+S^{(3)}_{i+1}
+\end{array}\right)
+
+=
+$$
+
+$$
+\left(\begin{array}{ccc} 
+0 & \frac{1}{2} (0.255 + 0.505) & \frac{1}{2} (0.095 + 0.495)\\
+\frac{1}{2} (0.745 + 0.495) & 0 & \frac{1}{2} (0.905 + 0.505)\\
+\frac{1}{2} (0.255 + 0.505) & \frac{1}{2} (0.745 + 0.495) & 0
+\end{array}\right)
+
+\left(\begin{array}{c} 
+S^{(1)}_{i}\\
+S^{(2)}_{i}\\
+S^{(3)}_{i}
+\end{array}\right)
+$$
+
+> sorry mobile users.
+
+Calculating the eigenvector for this matrix gives us $$\textbf{S} = 
+\left(\begin{array}{c} 
+0.2541\\
+0.4008\\
+0.3451
+\end{array}\right)
+$$
+and we once again calculate the overall winnign probability:
+
+$$
+\rho = \frac{1}{2} (0.745 + 0.495) \pi_1 + \frac{1}{2} (0.745 + 0.495) \pi_2 + \frac{1}{2} (0.095 + 0.495) \pi_3 =
+$$
+
+$$
+= 0.5078
+$$
+
+which is a $$50.78\%$$ chance of winning!
+
+Now, we choose these numbers for illustration purposes, but the original paper states this should work for *any* sequences of games $$A$$ and $$B$$ (given a sufficient amount of iterations) and specific settings of probabilities for the games. 
+
+If you feel like experimenting with different parameters feel free to [download this notebook](/assets/posts/2020/08/parrondo/code/parrondo.ipynb). Also all the code and images used are avaliable [here](https://github.com/LFRusso/lfrusso.github.io/tree/master/assets/posts/2020/08/parrondo).
+
+### References
+
+1. Gregory P. Harmer and Derek Abbott, *Losing strategies can win by Parrondo's paradox*
+2. Derek Abbot, Peter Taylor, and Juan Parrando, *Parrondo's Paradoxical Games and the Discrete Brownian Ratchet*
+3. Juan Parrondo, *Unsolved Problems of Noise and Fluctuations*
+
+Special thanks to 
+* Vsauce2, *[The Game You Win By Losing (Parrondo's Paradox)](https://www.youtube.com/watch?v=PpvboBJEozM)*
+
+for the great video that got me interested in this topic a year ago in the first place!
