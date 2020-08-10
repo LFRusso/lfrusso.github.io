@@ -322,7 +322,7 @@ Calculating the eigenvector for this matrix gives us $$\textbf{S} =
 0.3451
 \end{array}\right)
 $$
-and we once again calculate the overall winnign probability:
+and we once again calculate the overall winning probability:
 
 $$
 \rho = \frac{1}{2} (0.745 + 0.495) \pi_1 + \frac{1}{2} (0.745 + 0.495) \pi_2 + \frac{1}{2} (0.095 + 0.495) \pi_3 =
