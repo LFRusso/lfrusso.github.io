@@ -161,7 +161,7 @@ we call $$v$$ an **eigenvector** of $$T$$ with $$\lambda$$ as its associated **e
 
 So, $$\textbf{S}$$ is basically an eigenvector of our stochastic matrix with eigenvalue $$\lambda = 1$$, and finding it (if we can) results on an *exact* solution for our problem. If all this seems unrigorous and a little bit hand-wavy, that's because it is! Although we could develop the maths further if we wanted to, what we have here serves our purpose.
 
-Now we are left with finding $$\textbf{S}$$. If you try doing the matrix multiplications this will all result on a linear system and this all becomes a matter of solving it:
+Now we are left with finding $$\textbf{S}$$. If you try doing the matrix multiplications this will result on a linear system and our problem becomes a matter of solving it:
 
 $$
 \textbf{S} = M \textbf{S} = 
