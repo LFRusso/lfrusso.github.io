@@ -13,7 +13,7 @@ A relatively popular example of this is *Parrondo's paradox*. To start off, let'
 
 ![fig1](/assets/posts/2020/08/parrondo/img/fig3.png)
 
-Sadly we lost at the end, even though the coin was fair (i.e. we had a $$50/50$$ chance of winning). But if we had kept trying, the end result would look something like this:
+Sadly we lost at the end, even though the coin was fair (i.e. we had a $$50/50$$ chance of winning). But had we kept trying, the end result would look something like this:
 
 ![fig2](/assets/posts/2020/08/parrondo/img/fig4.png)
 > Tickets earned by games played averaged over $$1000$$ games.
@@ -25,7 +25,7 @@ This is much smoother. And we can also see we are really winning and losing with
 
 If that looks like a Bell curve centered around zero, that's because it is! And we can guarantee that with the [central limit theorem](https://sphweb.bumc.bu.edu/otlt/MPH-Modules/BS/BS704_Probability/BS704_Probability12.html).
 
-Now take a game just a little bit unfair, like the $$49.5\%$$ winning chance we talked about. Plottig the histogram in this case gives us the following:
+Now consider a game just a little bit unfair, with a $$49.5\%$$ chance of winnig, for example. Plottig the histogram in this case gives us the following:
 
 ![fig3](/assets/posts/2020/08/parrondo/img/fig6.png)
 
@@ -44,7 +44,7 @@ Would you play this game?
 
 An average gambler, also trying to maximize its profits, might think something like this:
 
-> The first game is only played when my tickets are a multiple of $$3$$, which means $$1$$ out of $$3$$ I'll have a $$9.5\%$$ probability of winning, while $$2$$ out of $$3$$ times I will be playing the good game. That means in the long run my chance of victory is
+> The first game is only played when my tickets are a multiple of $$3$$, which means $$1$$ out of $$3$$ times I'll only have a $$9.5\%$$ probability of winning, while $$2$$ out of $$3$$ times I will be playing the good game. That means in the long run my chance of earning money is
 > 
 > $$
 > \rho = \frac{1}{3} 0.095 + \frac{2}{3} 0.745 \approx 0.528
@@ -56,7 +56,7 @@ And while a fair line of thought, this is not exactly right, and the problem is 
 
 So let's move away from gambling for a while to talk about beans. 
 
-Imagine we have two different bean farmers conveniently named $$A$$ and $$B$$. Both their beans are great, but a person that buys from farmer $$A$$ happens to have a $$20\%$$ chance of buying from $$B$$ next time (and therefore an $$80\%$$ chance of buying from $$A$$ again), while if you buy from $$B$$ you have a you have a $$60\%$$ chance of buying from $$A$$ next. This can be ilustrated graphically:
+Imagine we have two different bean farmers conveniently named $$A$$ and $$B$$. Both their beans are great, but a person that buys from farmer $$A$$ happens to have a $$20\%$$ chance of buying from $$B$$ next time (and therefore an $$80\%$$ chance of buying from $$A$$ again), while if you buy from $$B$$, you have a $$60\%$$ chance of buying from $$A$$ next. This can be ilustrated graphically:
 
 ![fig3](/assets/posts/2020/08/parrondo/img/fig1.png)
 
@@ -64,9 +64,9 @@ Or like this:
 
 ![fig3](/assets/posts/2020/08/parrondo/img/fig2.png)
 
-Question is: what happens? Suppose $$100\%$$ of the population used to buy from $$A$$ before $$B$$ arrived, what percentage of it will start buying from $$B$$ after a while? Would the end result be any different if we started with the customers equally divided between the two farmers? Let's try visualizing that!
+Question is: what happens? Suppose $$100\%$$ of the population used to buy from $$A$$ before $$B$$ arrived, what percentage of it will start buying from $$B$$ after a while? Would the end result be any different had we started with the customers equally divided between the two farmers? Let's try visualizing that!
 
-Now we define the percentage of the population buying from $$A$$ at any give time as $$S^{(A)}$$, and from $$B$$ as $$S^{(B)}$$. Within one time step, the *new* values for the percentages will be given by:
+We start by defining the percentage of the population buying from $$A$$ at any give time as $$S^{(A)}$$, and from $$B$$ as $$S^{(B)}$$. Within one time step, the *new* values for the percentages will be given by:
 
 $$
 S^{(A)}_{i+1} = 0.8 S^{(A)}_{i} + 0.6 S^{(B)}_{i}
@@ -178,11 +178,11 @@ S^{(B)}
 \begin{cases} 0.8 S^{(A)} + 0.6 S^{(B)} = S^{(A)} \\ 0.2 S^{(B)} + 0.4 S^{(A)} = S^{(B)} \end{cases}
 $$
 
-What gives us $$S^{(A)} = 0.75, S^{(B)} = 0.25$$. That is, at the end it will settle for  $$75\%$$ of the population buying beans from $$A$$ and $$25\%$$ buying from $$B$$. Indeed, let's take a look at what would have happend had chosen to calculate several timesteps:
+What gives us $$S^{(A)} = 0.75, S^{(B)} = 0.25$$. That is, at the end it will settle for  $$75\%$$ of the population buying beans from $$A$$ and $$25\%$$ buying from $$B$$. Indeed, let's take a look at what would have happend had we chosen to calculate several timesteps:
 
 ![fig](/assets/posts/2020/08/parrondo/img/fig10.png)
 
-here we started with $$S^{(A)}_0 = 1, S^{(B)}_0 = 0$$, but it does not really matter as the convergence radius inclues all possible cenarios
+here we started with $$S^{(A)}_0 = 1, S^{(B)}_0 = 0$$, but it does not really matter as the convergence radius inclues all possible scenarios
 
 ![fig](/assets/posts/2020/08/parrondo/img/fig11.png)
 > Now starting with $$S^{(A)}_0 = S^{(B)}_0 = 0.5$$
@@ -313,7 +313,7 @@ S^{(3)}_{i}
 \end{array}\right)
 $$
 
-> sorry mobile users.
+> sorry, mobile users.
 
 Calculating the eigenvector for this matrix gives us $$\textbf{S} = 
 \left(\begin{array}{c} 
