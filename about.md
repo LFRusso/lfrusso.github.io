@@ -4,8 +4,8 @@ title: About
 permalink: /about/
 ---
 
-My name is Luiz Fernando (aka Russo) and I'm a **Computer Science** undergraduate student at the **University of São Paulo** (Brazil), having previously studied **Physics** at the same university from 2018 to 2020 and changed degrees after discovering CS was my true vocation.
+My name is Luiz Fernando and I'm a **Computer Science** undergraduate student at the **University of São Paulo** (Brazil), having previously studied **Physics** at the same university from 2018 to 2020.
 
-My interests range from Computational Physics (specially statistical and fluid mechanics) to Statistical Learning Theory and Machine Learning in general.
+My interests range from Computational Physics to Statistical Learning Theory, Natural Language Processing and Reinforcement Learning.
 
-I am currently working on the project **Flood Image Classification Using Deep Learning** as an undergraduate researcher, part of the *IBM-FAPESP Center of Research on Engineering*.
+I am currently working on the project **Integrating multi-agent systems for land use and transport with artificial city generation** (undergraduate research). Previous works include participation in the development of the information retrieval model for the legal documents search engine **Ulysses** for the Brazilian Chamber of Deputies.
