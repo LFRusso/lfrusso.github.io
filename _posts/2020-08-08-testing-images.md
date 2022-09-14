@@ -343,8 +343,3 @@ If you feel like experimenting with different parameters feel free to [download 
 1. Gregory P. Harmer and Derek Abbott, *Losing strategies can win by Parrondo's paradox*
 2. Derek Abbot, Peter Taylor, and Juan Parrando, *Parrondo's Paradoxical Games and the Discrete Brownian Ratchet*
 3. Juan Parrondo, *Unsolved Problems of Noise and Fluctuations*
-
-Special thanks to 
-* Vsauce2, *[The Game You Win By Losing (Parrondo's Paradox)](https://www.youtube.com/watch?v=PpvboBJEozM)*
-
-for the great video that got me interested in this topic a year ago in the first place!
